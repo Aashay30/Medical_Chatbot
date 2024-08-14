@@ -1,0 +1,60 @@
+# here first of all we are having a medical book as data source for the chatbot
+
+# now the data from book is extracted in form of chunks
+# as we know llama2 has 4096 token size limit so to avoid overflow divided into chunks
+# also defining chunks overlap for model to understand the contextual information
+
+# now we perform vector embedding of the text i.e text --> vector (number) to make model understand
+
+# now we create semantic index and knowledge base in vector databases
+# with the help of semantic index we build the cluster of same/similar words like man and king in 1 and woman and quuen in other if cluster on gender basis
+# using pinecone vector store as knowledge base as it's remote i.e cloud based database
+
+# we also build a frontend for providing the response for the user's queries
+
+# the query is converted into query embedding 
+# this query embedding is sent to our knowledge base
+# now this knowledge base will give us ranked results
+# here we also integrate our LLM here llama2 to filter out the ranked results
+# the response given by LLM will be then sent back to the user
+
+# Tech Stack used :
+1. programming language : python
+2. LangChain and LlamaIndex
+3. Frontend / Web App : Flask
+4. LLM : Meta Llama2
+5. VectorDB : Pinecone
+
+
+Architecture Flow:
+Data Source:
+
+Input: Medical Book
+Output: Raw text data from the book.
+Data Extraction & Chunking:
+
+Input: Raw text data.
+Process: Split text into manageable chunks with overlap to avoid Llama2's 4096 token size limit overflow.
+Output: Text chunks.
+Vector Embedding:
+
+Input: Text chunks.
+Process: Convert text into vector embeddings (numerical format) for the model to process.
+Output: Text vectors.
+Semantic Indexing & Knowledge Base:
+
+Input: Text vectors.
+Process: Build a semantic index and store in a vector database (e.g., Pinecone). Clustering is done on the basis of similar words.
+Output: Semantic index and knowledge base in the vector database.
+Frontend Interface:
+
+Purpose: Provide an interface for users to interact with the system.
+Query Handling:
+
+Input: User query.
+Process: Convert the query into vector embeddings, retrieve ranked results from the knowledge base, and filter them using Llama2.
+Output: Filtered query results.
+Response Delivery:
+
+Input: Filtered results.
+Output: Response provided back to the user.
