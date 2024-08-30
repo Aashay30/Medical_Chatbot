@@ -1,7 +1,9 @@
 ctransformers==0.2.5 # to load the quantized model using LangChain
 sentence-transformers==2.2.2 # to download the embedding model from huggingface
-pinecone-client # for vector database
-langchain==0.0.225
+# pinecone-client==2.2.4 # for vector database
+pinecone-client==3.0.0 # for vector database
+# langchain==0.0.225
+langchain
 flask
 pypdf
 python-dotenv
