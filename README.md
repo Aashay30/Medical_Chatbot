@@ -1,72 +1,66 @@
-# End-to-end-Medical-Chatbot-using-Llama2
+# 🏥 Medical ChatBot using Llama-2 🦙
 
-# How to run?
-### STEPS:
+A powerful **Medical ChatBot** designed to provide accurate medical information to users, built with **Llama-2** and advanced NLP techniques.
 
-Clone the repository
+## 🛠️ Project Architecture
 
-```bash
-Project repo: https://github.com/
-```
+### 🖥️ Backend
+1. **Data Ingestion** 📥: Medical data is ingested from a medical book (PDF file).
+2. **Data Extraction** 📝: Extracts and processes data from the PDF.
+3. **Text Chunking** 📚: Breaks down large content into smaller, manageable chunks to feed into the model.
+4. **Embedding** 🧬: Converts each text chunk into vector representations (embeddings).
+5. **Semantic Index Building** 🧠: Builds a semantic index to connect vectors, enhancing the understanding of the context.
+6. **Knowledge Base** 🗄️: Stores embeddings in a knowledge base using **Pinecone**, a vector database.
 
-### STEP 01- Create a conda environment after opening the repository
+### 🌐 Frontend
+1. **User Query Processing** 💬: Converts user questions into query embeddings.
+2. **Knowledge Base Lookup** 🔍: Searches the knowledge base using the query embeddings for relevant information.
+3. **LLM Model Processing** 🤖: Feeds the ranked results into the **Llama-2** model.
+4. **User Answer Generation** 📝: Generates a response for the user based on processed information.
 
-```bash
-conda create -n mchatbot python=3.8 -y
-```
+## 🛠️ Tech Stack
+- **Language**: Python 🐍
+- **Framework**: Langchain 🔗
+- **Frontend/Webapp**: Flask, HTML, CSS 🌐
+- **LLM**: Meta Llama 2 🦙
+- **Vector Database**: Pinecone 🧩
 
-```bash
-conda activate mchatbot
-```
+## 📄 Project Description
+This project utilizes the **Llama-2** model to build a robust **Medical ChatBot**. It leverages advanced NLP techniques and machine learning to provide precise answers to user queries. With a seamless integration of **LangChain** for the backend and **Flask** for the frontend, it offers a comprehensive solution for AI-driven healthcare information.
 
-### STEP 02- install the requirements
-```bash
-pip install -r requirements.txt
-```
+### 🚀 Key Features
+- Ingests medical data from PDFs 📚
+- Creates embeddings and builds a semantic index for deep understanding 🧠
+- Utilizes **Pinecone** for vector storage and retrieval 📦
+- Provides accurate and context-aware medical answers 🏥
 
+## 📸 Output
+![Medical ChatBot Output Screenshot](https://github.com/athiyaman-m/Medical-ChatBot-using-llama-2/assets/116479721/405e8dc2-1089-4426-bde1-e6e2c835a643)
 
-### Create a `.env` file in the root directory and add your Pinecone credentials as follows:
+## 🏃‍♂️ How to Run?
 
-```ini
-PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-PINECONE_API_ENV = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-```
+### 🔧 STEPS:
 
+1. **Clone the Repository** 🛠️:
+   ```bash
+   git clone https://github.com/your-repo-url
+   cd Medical-ChatBot-using-llama-2
+   ```
 
-### Download the quantize model from the link provided in model folder & keep the model in the model directory:
+2. **Create a Conda Environment** 🐍:
+   ```bash
+   conda create -n mchatbot python=3.8 -y
+   conda activate mchatbot
+    ```
 
-```ini
-## Download the Llama 2 Model:
+3. **Install Requirements** 📦:
+   ```bash
+   pip install -r requirements.txt
+    ```
 
-llama-2-7b-chat.ggmlv3.q4_0.bin
-
-
-## From the following link:
-https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/tree/main
-```
-
-```bash
-# run the following command
-python store_index.py
-```
-
-```bash
-# Finally run the following command
-python app.py
-```
-
-Now,
-```bash
-open up localhost:
-```
-
-
-### Techstack Used:
-
-- Python
-- LangChain
-- Flask
-- Meta Llama2
-- Pinecone
-
-
+4. **Set Up Pinecone Credentials** 🔑:
+   Create a .env file in the root directory and add
+   ```bash
+   PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+   PINECONE_API_ENV = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ```
