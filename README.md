@@ -35,7 +35,7 @@ This project utilizes the **Llama-2** model to build a robust **Medical ChatBot*
 - Provides accurate and context-aware medical answers 🏥
 
 ## 📸 Output
-![Medical ChatBot Output Screenshot](https://github.com/athiyaman-m/Medical-ChatBot-using-llama-2/assets/116479721/405e8dc2-1089-4426-bde1-e6e2c835a643)
+![Medical ChatBot Output Screenshot](https://github.com/Aashay30/Medical_Chatbot/blob/main/output.png)
 
 ## 🏃‍♂️ How to Run?
 
@@ -63,4 +63,15 @@ This project utilizes the **Llama-2** model to build a robust **Medical ChatBot*
    ```bash
    PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
    PINECONE_API_ENV = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ```
+5. **Download the Quantized Model** 🎯:
+
+6. **Run the Indexing Script** 🔄:
+   ```bash
+   python store_index.py
+    ```
+
+7. **Start the Application** 🚀:
+   ```bash
+   python app.py
     ```
