@@ -5,6 +5,7 @@
 # also defining chunks overlap for model to understand the contextual information
 
 # now we perform vector embedding of the text i.e text --> vector (number) to make model understand
+# embedding model is all-MiniLM-L6-v2 which return the vector of dimension 384
 
 # now we create semantic index and knowledge base in vector databases
 # with the help of semantic index we build the cluster of same/similar words like man and king in 1 and woman and quuen in other if cluster on gender basis
