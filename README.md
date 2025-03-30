@@ -39,6 +39,37 @@ This project utilizes the **Llama-2** model to build a robust **Medical ChatBot*
 
 ## 🏃‍♂️ How to Run?
 
+### Project Structure
+
+```
+Medical-Chatbot/
+├── .env                      # Environment variables (to be created by the user)
+├── .gitignore                # Git ignore file
+├── app.py                    # Main Flask application
+├── LICENSE                   # License file
+├── README.md                 # Project documentation
+├── requirements.txt          # Python dependencies
+├── setup.py                  # Setup script for the project
+├── store_index.py            # Script to store embeddings in Pinecone
+├── template.py               # Script to initialize project structure
+├── data/                     # Directory for storing data files
+│   └── Medical_book.pdf      # Example medical book for chatbot
+├── model/                    # Directory for model files
+│   ├── architecture.txt      # Architecture explanation
+│   ├── instruction.txt       # Instructions for downloading the model
+│   └── llama-2-7b-chat.ggmlv3.q4_0.bin # Llama 2 model file (to be downloaded)
+├── research/                 # Directory for research and experiments
+│   └── trials.ipynb          # Jupyter notebook for trials
+├── src/                      # Source code directory
+│   ├── __init__.py           # Package initializer
+│   ├── helper.py             # Helper functions for data processing
+│   └── prompt.py             # Prompt template for the chatbot
+├── static/                   # Static files (CSS, JS, images)
+│   └── style.css             # Stylesheet for the chatbot UI
+├── templates/                # HTML templates for the Flask app
+│   └── chat.html             # Chatbot UI template
+```
+
 ### 🔧 STEPS:
 
 1. **Clone the Repository** 🛠️:
