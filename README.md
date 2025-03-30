@@ -2,6 +2,13 @@
 
 A powerful **Medical ChatBot** designed to provide accurate medical information to users, built with **Llama-2** and advanced NLP techniques.
 
+---
+
+![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)![LangChain](https://img.shields.io/badge/langchain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+)
+
+---
+
 ## 🛠️ Project Architecture
 
 ### 🖥️ Backend
