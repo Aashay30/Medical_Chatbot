@@ -42,7 +42,7 @@ This project utilizes the **Llama-2** model to build a robust **Medical ChatBot*
 - Provides accurate and context-aware medical answers 🏥
 
 ## 📸 Output
-![Medical ChatBot Output Screenshot](https://github.com/Aashay30/Medical_Chatbot/blob/main/output.png)
+![Medical ChatBot Output Screenshot](dashboard.png)
 
 ## 🏃‍♂️ How to Run?
 
