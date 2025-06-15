@@ -11,6 +11,21 @@ A powerful **Medical ChatBot** designed to provide accurate medical information 
 
 ## 🛠️ Project Architecture
 
+_**Back-end Architecture:**_
+![image](backend_arch.png)
+
+
+_**Components:**_
+1. PDF File (Medical Books): Loading the medical books as a DATA SOURCE to the LLM
+2. Extract Data or Information from the PDF file
+3. Creating the whole data into Text Chunks [Because, the GPT models have a limited Context Window - Using Llama 2 (Context Window - 4096 Tokens)]
+4. Creating Embeddings for every chunk.
+5. Implementing the Semantic Index (Word2Vec - King, Queen Clustering)
+6. Creating Vector Database (Pinecone Vectorstore)
+
+_**Front-end Architecture:**_
+![image](frontend_arch.png)
+
 ### 🖥️ Backend
 1. **Data Ingestion** 📥: Medical data is ingested from a medical book (PDF file).
 2. **Data Extraction** 📝: Extracts and processes data from the PDF.
@@ -35,21 +50,6 @@ A powerful **Medical ChatBot** designed to provide accurate medical information 
 ## 📄 Project Description
 This project utilizes the **Llama-2** model to build a robust **Medical ChatBot**. It leverages advanced NLP techniques and machine learning to provide precise answers to user queries. With a seamless integration of **LangChain** for the backend and **Flask** for the frontend, it offers a comprehensive solution for AI-driven healthcare information.
 
-## Project Architecture
-_**Back-end Architecture:**_
-![image](backend_arch.png)
-
-
-_**Components:**_
-1. PDF File (Medical Books): Loading the medical books as a DATA SOURCE to the LLM
-2. Extract Data or Information from the PDF file
-3. Creating the whole data into Text Chunks [Because, the GPT models have a limited Context Window - Using Llama 2 (Context Window - 4096 Tokens)]
-4. Creating Embeddings for every chunk.
-5. Implementing the Semantic Index (Word2Vec - King, Queen Clustering)
-6. Creating Vector Database (Pinecone Vectorstore)
-
-_**Front-end Architecture:**_
-![image](frontend_arch.png)
 
 ### 🚀 Key Features
 - Ingests medical data from PDFs 📚
@@ -57,8 +57,26 @@ _**Front-end Architecture:**_
 - Utilizes **Pinecone** for vector storage and retrieval 📦
 - Provides accurate and context-aware medical answers 🏥
 
-## 📸 Output
-![Medical ChatBot Output Screenshot](dashboard.png)
+## 📸 Screenshots: Output Website Overview
+
+### 📝 Prompt the Questions
+
+![Prompt Input 1](prompt_ques_1.png)  
+*User enters a natural language question into the chatbot interface.*
+
+![Prompt Input 2](prompt_ques_2.png)  
+*System processes the query and prepares to retrieve relevant context from documents.*
+
+---
+
+### 📄 Questions Related to Document — *Medical_book.pdf* (RAG Implementation)
+
+![Document-Based Response 1](prompt_ques_3.png)  
+*Chatbot generates a relevant answer based on the uploaded medical PDF using RAG.*
+
+![Document-Based Response 2](prompt_ques_4.png)  
+*Continued interaction showcasing context-aware responses from the document.*
+
 
 ## 🏃‍♂️ How to Run?
 
