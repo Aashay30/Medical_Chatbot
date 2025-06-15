@@ -35,6 +35,22 @@ A powerful **Medical ChatBot** designed to provide accurate medical information 
 ## 📄 Project Description
 This project utilizes the **Llama-2** model to build a robust **Medical ChatBot**. It leverages advanced NLP techniques and machine learning to provide precise answers to user queries. With a seamless integration of **LangChain** for the backend and **Flask** for the frontend, it offers a comprehensive solution for AI-driven healthcare information.
 
+## Project Architecture
+_**Back-end Architecture:**_
+![image](backend_arch.png)
+
+
+_**Components:**_
+1. PDF File (Medical Books): Loading the medical books as a DATA SOURCE to the LLM
+2. Extract Data or Information from the PDF file
+3. Creating the whole data into Text Chunks [Because, the GPT models have a limited Context Window - Using Llama 2 (Context Window - 4096 Tokens)]
+4. Creating Embeddings for every chunk.
+5. Implementing the Semantic Index (Word2Vec - King, Queen Clustering)
+6. Creating Vector Database (Pinecone Vectorstore)
+
+_**Front-end Architecture:**_
+![image](frontend_arch.png)
+
 ### 🚀 Key Features
 - Ingests medical data from PDFs 📚
 - Creates embeddings and builds a semantic index for deep understanding 🧠
